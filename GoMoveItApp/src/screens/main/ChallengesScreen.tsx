@@ -166,7 +166,7 @@ export const ChallengesScreen: React.FC<ChallengesScreenProps> = ({
               </View>
               <ProgressBar
                 progress={progress}
-                gradientColors={Colors.gradients.primary}
+                gradientColors={[...Colors.gradients.primary]}
                 height={8}
               />
             </View>

@@ -35,28 +35,28 @@ const onboardingData: OnboardingItem[] = [
     title: 'Track Your Steps',
     description: 'Connect your smartwatch or fitness band and track every step you take throughout the day.',
     icon: 'footsteps',
-    gradientColors: Colors.gradients.primary,
+    gradientColors: [...Colors.gradients.primary],
   },
   {
     id: '2',
     title: 'Earn Rewards',
     description: 'Get rewarded with points for reaching your daily step goals. The more you walk, the more you earn!',
     icon: 'gift',
-    gradientColors: Colors.gradients.gold,
+    gradientColors: [...Colors.gradients.gold],
   },
   {
     id: '3',
     title: 'Level Up',
     description: 'Gain experience points and level up your profile. Higher levels unlock better rewards and challenges.',
     icon: 'trending-up',
-    gradientColors: Colors.gradients.accent,
+    gradientColors: [...Colors.gradients.accent],
   },
   {
     id: '4',
     title: 'Join Challenges',
     description: 'Compete with others in exciting challenges. Win prizes and prove you\'re the best!',
     icon: 'trophy',
-    gradientColors: Colors.gradients.secondary,
+    gradientColors: [...Colors.gradients.secondary],
   },
 ];
 
@@ -88,7 +88,7 @@ export const OnboardingScreen: React.FC<OnboardingScreenProps> = ({
     <View style={styles.slide}>
       <View style={styles.illustrationContainer}>
         <LinearGradient
-          colors={item.gradientColors}
+          colors={item.gradientColors as any}
           style={styles.iconCircle}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}

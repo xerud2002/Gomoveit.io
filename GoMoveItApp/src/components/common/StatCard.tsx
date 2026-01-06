@@ -21,7 +21,7 @@ interface StatCardProps {
   subtitle?: string;
   icon?: keyof typeof Ionicons.glyphMap;
   iconColor?: string;
-  gradientColors?: string[];
+  gradientColors?: readonly string[] | string[];
   trend?: {
     value: number;
     isPositive: boolean;
@@ -83,7 +83,7 @@ export const StatCard: React.FC<StatCardProps> = ({
   if (gradientColors) {
     return (
       <LinearGradient
-        colors={gradientColors}
+        colors={gradientColors as any}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         style={[styles.container, styles.gradientContainer, style]}
