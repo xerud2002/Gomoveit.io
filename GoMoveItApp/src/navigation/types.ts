@@ -28,6 +28,7 @@ export type MainStackParamList = {
   Level: undefined;
   Devices: undefined;
   AddDevice: undefined;
+  FAQ: undefined;
   ChallengeDetail: { challengeId: string };
   Withdraw: undefined;
   Deposit: undefined;

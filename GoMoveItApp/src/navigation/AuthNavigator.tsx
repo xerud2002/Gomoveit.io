@@ -12,6 +12,7 @@ import {
   SignUpScreen,
   SignInScreen,
   OTPScreen,
+  ForgotPasswordScreen,
 } from '../screens/auth';
 
 const Stack = createNativeStackNavigator<AuthStackParamList>();
@@ -22,6 +23,7 @@ type WelcomeScreenProps = NativeStackScreenProps<AuthStackParamList, 'Welcome'>;
 type SignUpScreenProps = NativeStackScreenProps<AuthStackParamList, 'SignUp'>;
 type SignInScreenProps = NativeStackScreenProps<AuthStackParamList, 'SignIn'>;
 type OTPScreenProps = NativeStackScreenProps<AuthStackParamList, 'OTP'>;
+type ForgotPasswordScreenProps = NativeStackScreenProps<AuthStackParamList, 'ForgotPassword'>;
 
 interface AuthNavigatorProps {
   onAuthComplete: () => void;
@@ -98,6 +100,17 @@ export const AuthNavigator: React.FC<AuthNavigatorProps> = ({ onAuthComplete }) 
             }}
             onResend={() => {}}
             onBack={() => props.navigation.goBack()}
+          />
+        )}
+      </Stack.Screen>
+
+      <Stack.Screen name="ForgotPassword">
+        {(props: ForgotPasswordScreenProps) => (
+          <ForgotPasswordScreen
+            onBack={() => props.navigation.goBack()}
+            onResetSuccess={(email: string) => {
+              props.navigation.navigate('SignIn');
+            }}
           />
         )}
       </Stack.Screen>
