@@ -37,5 +37,6 @@ export type MainStackParamList = {
 
 export type RootStackParamList = {
   Auth: undefined;
+  ConnectDevice: undefined;
   Main: undefined;
 };

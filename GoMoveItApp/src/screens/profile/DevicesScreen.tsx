@@ -44,10 +44,14 @@ const connectedDevices: Device[] = [
 ];
 
 const availableDevices = [
+  { type: 'oneplus', name: 'OnePlus Watch 2', icon: 'watch' },
   { type: 'apple-watch', name: 'Apple Watch', icon: 'watch' },
   { type: 'fitbit', name: 'Fitbit', icon: 'fitness' },
   { type: 'garmin', name: 'Garmin', icon: 'watch' },
   { type: 'samsung', name: 'Samsung Galaxy Watch', icon: 'watch' },
+  { type: 'google', name: 'Google Pixel Watch', icon: 'watch' },
+  { type: 'amazfit', name: 'Amazfit', icon: 'watch' },
+  { type: 'huawei', name: 'Huawei Watch', icon: 'watch' },
 ];
 
 export const DevicesScreen: React.FC<DevicesScreenProps> = ({ onBack }) => {
