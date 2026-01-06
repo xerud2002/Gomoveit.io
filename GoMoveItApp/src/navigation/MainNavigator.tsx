@@ -21,6 +21,7 @@ interface MainNavigatorProps {
 export const MainNavigator: React.FC<MainNavigatorProps> = ({ onLogout }) => {
   return (
     <Stack.Navigator
+      id="MainStack"
       screenOptions={{
         headerShown: false,
         animation: 'slide_from_right',

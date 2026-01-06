@@ -26,6 +26,7 @@ export const MainTabNavigator: React.FC<MainTabNavigatorProps> = ({
 }) => {
   return (
     <Tab.Navigator
+      id="MainTabs"
       tabBar={(props: BottomTabBarProps) => <CustomTabBar {...props} />}
       screenOptions={{
         headerShown: false,

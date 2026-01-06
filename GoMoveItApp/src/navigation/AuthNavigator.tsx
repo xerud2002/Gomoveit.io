@@ -30,6 +30,7 @@ interface AuthNavigatorProps {
 export const AuthNavigator: React.FC<AuthNavigatorProps> = ({ onAuthComplete }) => {
   return (
     <Stack.Navigator
+      id="AuthStack"
       screenOptions={{
         headerShown: false,
         animation: 'slide_from_right',
